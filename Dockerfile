@@ -1,5 +1,5 @@
 FROM php:7-apache
-MAINTAINER Simon Hugentobler <simon.hugentobler@bertschi.com>
+MAINTAINER John Lutz <jlutz@broadiq.com>
 
 
 
@@ -50,6 +50,7 @@ RUN cd /var/www/html \
     && touch /var/www/html/conf.d/config.php \
     && ln -s /var/www/html/conf.d/config.php config.php \
     && ln -s /var/www/html/conf.d/config_override.php config_override.php
+RUN cd /var/www/html/conf.d && chmod -R 766 .
 
 #Fix php warnings in dashboards
 RUN cd /var/www/html \
