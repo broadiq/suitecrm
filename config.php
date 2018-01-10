@@ -398,4 +398,15 @@ $sugar_config = array (
   'use_real_names' => true,
   'vcal_time' => '2',
   'verify_client_ip' => true,
+  'authenticationClass' => 'CASAuthenticate',
+  'cas' => array(
+    'library' => 'CAS.php',
+    'hostname' => 'broadiq.com',
+    'port' => 443,
+    'uri' => 'cas',
+    'changeSessionID' => FALSE,
+    'proxies' => array(
+      'https://proxy-cas.example.com',
+    ),
+  ),
 );

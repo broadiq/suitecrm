@@ -37,6 +37,9 @@ RUN docker-php-ext-install -j$(nproc) iconv mcrypt \
 RUN curl -O https://codeload.github.com/salesagility/SuiteCRM/tar.gz/v7.6.8 && tar xvfz v7.6.8 --strip 1 -C /var/www/html
 
 COPY config.php /var/www/html
+COPY CAS.php /var/www/html
+COPY CAS /var/www/html/CAS
+COPY CASAuthenticate /var/www/html/modules/Users/authentication/CASAuthenticate
 
 RUN chown www-data:www-data /var/www/html/ -R
 RUN cd /var/www/html && chmod -R 755 .
