@@ -57,6 +57,7 @@ RUN cd /var/www/html/conf.d && chmod -R 766 .
 RUN cd /var/www/html \
     && sed -i.back s/'<?php/<?php\n\nini_set\(display_errors\,0\)\;\nerror_reporting\(E_ALL\ \^\ E_STRICT\)\;\n\n/g' /var/www/html/modules/Calls/Dashlets/MyCallsDashlet/MyCallsDashlet.php
 
+RUN cd /var/www/html && chown -R www-data:www-data . 
 
 RUN apt-get clean
 
