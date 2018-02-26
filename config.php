@@ -1,5 +1,8 @@
 <?php
 // created: 2018-01-10 21:37:37
+
+$sugar_config['http_referer']['list'][] = 'www.broadiq.com';
+
 $sugar_config = array (
   'addAjaxBannedModules' => 
   array (
