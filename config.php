@@ -93,7 +93,6 @@ $sugar_config = array (
   'datef' => 'm/d/Y',
   'dbconfig' => 
   array (
-    'db_host_name' => 'a816b73d0f64111e78b3a0e6ea83b386-450203345.us-east-1.elb.amazonaws.com',
     'db_host_name' => getenv('DBHOST'),
     'db_host_instance' => 'SQLEXPRESS',
     'db_user_name' => getenv('DBUSERNAME'),
