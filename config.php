@@ -95,13 +95,13 @@ $sugar_config = array (
   'dbUSRData' => 'create',
   'dbconfig' => 
   array (
-    'db_host_name' => '34.67.196.20:32698',
     'db_host_instance' => '',
-    'db_user_name' => 'root',
-    'db_password' => 'testing',
-    'db_name' => 'suitecrm',
-    'db_type' => 'mysql',
     'db_port' => '',
+    'db_host_name' => getenv('DATABASE_HOST'),
+    'db_user_name' => getenv('DB_ADMIN_USERNAME'),
+    'db_password' => getenv('DB_ADMIN_PASSWORD'),
+    'db_name' => getenv('DATABASE_NAME'),
+    'db_type' => 'mysql',
     'db_manager' => 'MysqliManager',
   ),
   'dbconfigoption' => 
